@@ -1,0 +1,136 @@
+ body {
+                font-family: 'Inter', 'Poppins', 'Work Sans', Arial, sans-serif;
+                background: #f4f6fb;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+            .container {
+                background: #fff;
+                box-shadow: 0 8px 32px rgba(75, 94, 252, 0.12);
+                border-radius: 18px;
+                padding: 5vw 4vw;
+                margin: 20px auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: none;
+                width: 90vw;
+                max-width: 360px;
+                min-width: 240px;
+            }
+            h2 {
+                font-weight: 600;
+                color: #2d3250;
+                margin-bottom: 3vw;
+                letter-spacing: 1px;
+                font-size: clamp(1.5rem, 5vw, 1.8rem);
+            }
+           .screen {
+                width: 300px;
+                height: 48px;
+                border-radius: 10px;
+                border: 1.5px solid #e3e6ee;
+                margin-bottom: 18px;
+                text-align: right;
+                padding: 10px 14px;
+                font-size: 22px;
+                background: #f7f8fa;
+                color: #222;
+                box-shadow: 0 2px 8px rgba(75, 94, 252, 0.04);
+                letter-spacing: 1px;
+                overflow-x: auto;
+            }
+            .buttons {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: clamp(8px, 2vw, 12px);
+                border-radius: 24px;
+                margin-top: 2vw;
+                width: 100%;
+            }
+            button {
+                width: 100%;
+                height: clamp(40px, 12vw, 60px);
+                font-size: clamp(16px, 4.5vw, 20px);
+                border-radius: 16px;
+                outline: none;
+                cursor: pointer;
+                color: #222;
+                background-color: #fff;
+                border: none;
+                transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+                box-shadow: 0 2px 8px rgba(75, 94, 252, 0.04);
+            }
+            button:active {
+                background: #e3e6ee;
+            }
+            /* Math operation buttons */
+            button:nth-child(4),
+            button:nth-child(8),
+            button:nth-child(12),
+            button:nth-child(16) {
+                background-color: #4B5EFC;
+                color: #fff;
+                font-weight: 600;
+            }
+            /* AC and = buttons */
+            button:nth-child(14),
+            button:nth-child(15) {
+                background-color: #e3e6ee;
+                color: #4B5EFC;
+                font-weight: 600;
+            }
+            button:hover {
+                box-shadow: 0 4px 16px rgba(75, 94, 252, 0.10);
+                background: #f4f6fb;
+            }
+            /* Responsive adjustments for small devices (below 600px) */
+            @media (max-width: 600px) {
+                .container {
+                    padding: 4vw 3vw;
+                    margin: 10px auto;
+                }
+                h2 {
+                    font-size: clamp(1.2rem, 4.5vw, 1.5rem);
+                }
+                .screen {
+                    height: clamp(36px, 10vw, 48px);
+                    font-size: clamp(16px, 4vw, 20px);
+                    padding: 2vw 2.5vw;
+                }
+                .buttons {
+                    gap: clamp(6px, 1.8vw, 10px);
+                }
+                button {
+                    height: clamp(36px, 10vw, 48px);
+                    font-size: clamp(14px, 4vw, 18px);
+                }
+            }
+            /* Responsive adjustments for large devices (above 1200px) */
+            @media (min-width: 1200px) {
+                .container {
+                    max-width: 400px;
+                    padding: 30px 25px;
+                }
+                h2 {
+                    font-size: 2rem;
+                }
+                .screen {
+                    height: 70px;
+                    font-size: 28px;
+                    padding: 15px 20px;
+                }
+                .buttons {
+                    gap: 14px;
+                }
+                button {
+                    height: 70px;
+                    font-size: 24px;
+                }
+            }
